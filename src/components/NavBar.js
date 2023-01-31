@@ -5,8 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function BasicExample(props) {
   return (
-    <Navbar bg="light" expand="lg">
-      <Container>
+    <Navbar className="navbar-dark" bg="dark" expand="lg">
+      <Container >
         <Navbar.Brand href="#home">{props.title}</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
