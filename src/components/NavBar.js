@@ -1,16 +1,22 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import App from '../App';
+// import App from '../App';
 import React ,{useState} from 'react';
 
 function BasicExample(props) {
   const handleMode=()=>{
+    var click=document.getElementById("click");
     if(val==="Dark"){
-      console.log(App);
+      click.style.color="white";
+      click.style.background="#212529";
+      click.style.height="1000px";
       setVal("Light");
     }
     else{
+      click.style.color="black";
+      click.style.background="white";
+      // click.style.height="1000px";
       setVal("Dark");
     }
   }

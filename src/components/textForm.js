@@ -19,6 +19,11 @@ function TextForm(props) {
         event.preventDefault();
         setText("");
     }
+    const handleExtraSpaces=event=>{
+      event.preventDefault();
+      let newText=text.split(/[ ]+/);
+      setText(newText.join(" "));
+    }
     const [text,setText]=useState("");
 
   return (
@@ -31,6 +36,7 @@ function TextForm(props) {
       <button className='btn btn-primary m-1' onClick={handleUpClick} >UPPER CASE</button>
       <button className='btn btn-primary m-1' onClick={handlelowClick}>lower case</button>
       <button className='btn btn-primary m-1' onClick={handleClrClick}>clear</button>
+      <button className='btn btn-primary m-1' onClick={handleExtraSpaces}>Remove Extra Spaces</button>
     </Form>
     <div className="container my-3">
         <h4>Text Summary</h4>
